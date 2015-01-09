@@ -40,4 +40,10 @@ public class SimpleObjectIdResolver implements ObjectIdResolver {
     {
         return this;
     }
+
+    @Override
+    public Object createItem(IdKey id) {
+        // The default resolver reports unresolved forward references
+        return null;
+    }
 }
